@@ -12,7 +12,7 @@ public class MainClassString {
         System.out.println(line.substring(2, 4));
         System.out.println("-------");
         String line2 = " Test 2 ";
-        System.out.println("'" + line2.trim() + "'");
+        System.out.println("'" + line2.trim() + "'"); //убрать пробелы
         String line3 = new String( "test");
         if (line.equals(line3)){
             System.out.println("Eq");
