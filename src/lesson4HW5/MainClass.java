@@ -11,21 +11,21 @@ public class MainClass {
         arrayInteger.add(66);
         arrayInteger.add(44);
 
-        int min = arrayInteger.get(0);
-        int max = arrayInteger.get(arrayInteger.size()-1);
-        for (Integer i : arrayInteger){
-            if (i<min) min = i;
-            if (i>max) max = i;
-        }
-        System.out.println("Minimum = " + min);
-        System.out.println("Maximum = " + max);
+        Integer maxNumber = findMaxNumber(arrayInteger);
+        System.out.println("Maximum = " + maxNumber);
 
         List<Integer> arrayList = new ArrayList<>();
         for (int i = arrayInteger.size()-1; i >= 0; i--) {
             arrayList.add(arrayInteger.get(i));
         }
         System.out.println(arrayList);
-
     }
 
+    public static Integer findMaxNumber (ArrayList<Integer> list){
+        Integer max = list.get(0);
+        for (Integer i : list){
+            if (i>max) max = i;
+        }
+        return max;
+    }
 }
