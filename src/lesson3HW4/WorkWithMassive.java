@@ -17,6 +17,7 @@ public class WorkWithMassive {
                 massive[i][j] = numberForMassive;
             }
         }
+        printMatrix(massive);
         return massive;
     }
 
@@ -39,13 +40,10 @@ public class WorkWithMassive {
             return new int[][]{{numberForMassive}};
         }
         for (int i = 0; i < massive.length; i++) {
-            for (int j = 0; j < massive[i].length; j++) {
-                for (int k = 0; k < massive[j].length; k++) {
-                    massive[i][i] = numberForMassive;
-                }
-            }
-        }
+            massive[i][i] = numberForMassive;
+       }
         System.out.println("Filling of matrix`s left diagonal successful!");
+        printMatrix(massive);
         return massive;
     }
 
@@ -59,18 +57,18 @@ public class WorkWithMassive {
             return new int[][]{{numberForMassive}};
         }
         for (int i = 0; i < massive.length; i++) {
+            massive[i][i] = numberForMassive;
             for (int j = 0; j < massive[i].length; j++) {
-                for (int k = 0; k < massive[j].length; k++) {
-                    massive[j][massive[j].length - 1 - j] = numberForMassive;
-                }
+                massive[j][massive[j].length - 1 - j] = numberForMassive;
             }
         }
         System.out.println("Filling of matrix`s right diagonal successful!");
+        printMatrix(massive);
         return massive;
     }
 
 
-    public void printMatrix(int[][] matrix) {
+    private void printMatrix(int[][] matrix) {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
                 System.out.printf(matrix[i][j] + "  ");
