@@ -4,7 +4,7 @@ public class MainClass {
 
     public static void main(String[] args) {
         WorkWithMassive workWithMassive = new WorkWithMassive();
-        int[][] newMassive = workWithMassive.createMassive(3,3,8);
+        int[][] newMassive = workWithMassive.createMassive(-3,3,8);
         workWithMassive.printMatrix(newMassive);
         System.out.println();
         int [][] newMassiveL = workWithMassive.fillingOfLeftDiagonal(newMassive,1);

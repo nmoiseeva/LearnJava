@@ -1,14 +1,16 @@
 package lesson3HW4;
 
 public class WorkWithMassive {
-    /**
-     *
-     * @param countLine к-во строк в матрице
-     * @param countColumn к-во столбцов в матрице
-     * @param numberForMassive число которым будет заполнена матрица
-     * @return созданная матрица
-     */
+
     public int[][] createMassive(int countLine, int countColumn, int numberForMassive) {
+        if (countLine <0){
+            countLine=countLine*(-1);
+            System.out.println("Massive side can`t be negative value");
+        }
+        if (countColumn <0){
+            countColumn=countColumn*(-1);
+            System.out.println("Massive side can`t be negative value");
+        }
         int[][] massive = new int[countLine][countColumn];
         for (int i = 0; i < massive.length; i++) {
             for (int j = 0; j < massive[i].length; j++) {
@@ -32,6 +34,9 @@ public class WorkWithMassive {
         //Check that matrix is square
         if (isMatrixNotSquare(massive)) {
             return massive;
+        } else if (massive.length == 0) {
+            System.out.println("Your matrix is empty!");
+            return new int[][]{{numberForMassive}};
         }
         for (int i = 0; i < massive.length; i++) {
             for (int j = 0; j < massive[i].length; j++) {
@@ -49,6 +54,9 @@ public class WorkWithMassive {
         //Check that matrix is square
         if (isMatrixNotSquare(massive)) {
             return massive;
+        } else if (massive.length == 0) {
+            System.out.println("Your matrix is empty!");
+            return new int[][]{{numberForMassive}};
         }
         for (int i = 0; i < massive.length; i++) {
             for (int j = 0; j < massive[i].length; j++) {
