@@ -9,7 +9,8 @@ public class MainClass {
         workWithMassive.fillingOfLeftDiagonal(newMassive,1);
         System.out.println();
         workWithMassive.fillingOfRightDiagonal(newMassive,5);
-
+        System.out.println();
+        workWithMassive.fillingOfTwoDiagonals(newMassive,5);
     }
 
 

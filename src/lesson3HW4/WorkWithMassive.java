@@ -57,7 +57,6 @@ public class WorkWithMassive {
             return new int[][]{{numberForMassive}};
         }
         for (int i = 0; i < massive.length; i++) {
-            massive[i][i] = numberForMassive;
             for (int j = 0; j < massive[i].length; j++) {
                 massive[j][massive[j].length - 1 - j] = numberForMassive;
             }
@@ -67,6 +66,24 @@ public class WorkWithMassive {
         return massive;
     }
 
+    public int[][] fillingOfTwoDiagonals(int[][] massive, int numberForMassive) {
+        //Check that matrix is square
+        if (isMatrixNotSquare(massive)) {
+            return massive;
+        } else if (massive.length == 0) {
+            System.out.println("Your matrix is empty!");
+            return new int[][]{{numberForMassive}};
+        }
+        for (int i = 0; i < massive.length; i++) {
+            massive[i][i] = numberForMassive;
+            for (int j = 0; j < massive[i].length; j++) {
+                massive[j][massive[j].length - 1 - j] = numberForMassive;
+            }
+        }
+        System.out.println("Filling of matrix`s both diagonal successful!");
+        printMatrix(massive);
+        return massive;
+    }
 
     private void printMatrix(int[][] matrix) {
         for (int i = 0; i < matrix.length; i++) {
