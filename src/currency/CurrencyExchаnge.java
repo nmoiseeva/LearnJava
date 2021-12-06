@@ -16,15 +16,27 @@ public class CurrencyExchаnge {
             MenuCurrency.printCurrencyMenu();
             currencyNumber = MenuCurrency.getNumberFromConsole();
 
-            if (currencyNumber ==0){
+            if (currencyNumber == 0) {
                 System.out.println("Wrong currency. Try again!");
                 continue;
-            }else if(currencyNumber != EXIT_NUMBER){
-   //             System.out.println(currencyNumber);
+            } else if (currencyNumber != EXIT_NUMBER) {
+                //             System.out.println(currencyNumber);
                 workingCurrency = MenuCurrency.setCurrency(currencyNumber);
-                System.out.println(workingCurrency.getCurrencyName()+ " " + workingCurrency.getKursNBU());
-            }
+                System.out.println(workingCurrency.getCurrencyName() + " " + workingCurrency.getKursNBU());
 
+                boolean exitFromActionMenu;
+                do {
+                    MenuActions.printActionsMenu(workingCurrency);
+                    int menuNumber = MenuActions.getNumberFromConsole();
+                    exitFromActionMenu = menuNumber != 100;
+                    if (exitFromActionMenu) {
+                        //                 System.out.println(menuNumber);
+                        MenuActions.doActionsWithCurrency(workingCurrency, menuNumber);
+                    }
+                } while (exitFromActionMenu);
+            }
         } while (currencyNumber != EXIT_NUMBER);
     }
+
+
 }

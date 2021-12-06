@@ -12,7 +12,18 @@ abstract class Currency {
 //    private double kursSell = kursNBU / marga;
 
     public Currency(double kursNBU){
+
         this.kursNBU = kursNBU;
+        if (!(this instanceof IsFreeConverted)) {
+            marga = marga*1.2;
+            System.out.println("This is NOT real Currency!! So marga is changed. Current marga = " + df.format(marga));
+        }
+        else {
+            if(!((IsFreeConverted) this).isFreeConv()){
+                marga = marga*1.1;
+                System.out.println("This is NOT free converted currency!! So marga is changed. Current marga = " + df.format(marga));
+            }
+        }
     }
 
     public double getMarga() {
@@ -21,6 +32,16 @@ abstract class Currency {
 
     public void setMarga(double marga) {
         this.marga = marga;
+        if (!(this instanceof IsFreeConverted)) {
+            marga = marga*1.2;
+            System.out.println("This is NOT real Currency!! So marga is changed. Current marga = " + df.format(marga));
+        }
+        else {
+            if(!((IsFreeConverted) this).isFreeConv()){
+                marga = marga*1.1;
+                System.out.println("This is NOT free converted currency!! So marga is changed. Current marga = " + df.format(marga));
+            }
+        }
     }
 
     public double getKursNBU() {

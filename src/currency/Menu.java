@@ -12,6 +12,16 @@ public class Menu {
             return 0;
         }
     }
+
+    public static double getDoubleNumberFromConsole() {
+        Scanner scanner = new Scanner(System.in);
+        try {
+            return scanner.nextDouble();
+        } catch (Exception e) {
+            System.out.println("Error");
+            return 0;
+        }
+    }
 }
 
 
