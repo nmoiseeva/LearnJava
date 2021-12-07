@@ -1,0 +1,21 @@
+2021-07-12 19:54:03  INFO [MainClass] :  Test info
+2021-07-12 19:54:03  ERROR [MainClass] :  Test error 
+2021-07-12 19:57:58  INFO [MainClass] :  Test info 
+2021-07-12 19:57:58  ERROR [MainClass] :  Test error 
+2021-07-12 20:06:39  INFO [MainClass] :  Test info 
+2021-07-12 20:06:39  DEBUG [MainClass] :  Test debug 
+2021-07-12 20:06:39  ERROR [MainClass] :  Test error 
+2021-07-12 20:06:50  INFO [MainClass] :  Test info 
+2021-07-12 20:06:50  ERROR [MainClass] :  Test error 
+2021-07-12 20:15:11  INFO [MainClass] :  Test info 
+2021-07-12 20:15:11  ERROR [MainClass] :  Test error 
+2021-07-12 20:15:12  INFO [lesson5.Console] : test
+2021-07-12 21:00:18  INFO [MainClass] :  Test info 
+2021-07-12 21:00:18  ERROR [MainClass] :  Test error 
+2021-07-12 21:00:18  INFO [lesson5.Console] : test
+2021-07-12 21:02:20  INFO [MainClass] :  Test info 
+2021-07-12 21:02:20  ERROR [MainClass] :  Test error 
+2021-07-12 21:02:20  INFO [lesson5.Console] : test
+2021-07-12 21:22:10  INFO [MainClass] :  Test info 
+2021-07-12 21:22:10  ERROR [MainClass] :  Test error 
+2021-07-12 21:22:10  INFO [lesson5.Console] : test
